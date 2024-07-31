@@ -6,6 +6,7 @@
       @reset="onReset"
       class="q-gutter-md"
     >
+    <!-- name -->
       <q-input
         filled
         v-model="name"
@@ -14,6 +15,7 @@
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type your name']"
       />
+      <!-- surname -->
       >
       <q-input
         filled
@@ -55,12 +57,14 @@ export default {
   setup () {
     const $q = useQuasar()
 
-    const name = ref(null)
+    const name = ref("papasorn")
+    const surname = ref("saenchai")
     const age = ref(null)
     const accept = ref(false)
 
     return {
       name,
+      surname,
       age,
       accept,
 
