@@ -11,7 +11,7 @@
         filled
         v-model="id"
         label="Your id *"
-        hint="id-code"
+        hint="Id-code"
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type your id-code']"
       />
@@ -98,6 +98,8 @@ export default {
       },
 
       onReset () {
+        id.value = null
+        surname.value = null
         name.value = null
         age.value = null
         accept.value = false
